@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/statusBarsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLayout"
+        app:layout_constrainEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/petImageView">
+
+    <Button
+        android:id="@+id/feed"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:text="feed"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        <ImageView
+        android:id="@+id/feed"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/pet_image_description"
+        android:src="@drawable/eating"
+        app:layout_constraintBottom_toTopOf="@+id/statusBarsLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVerticle_chainStyle="packed" />
+        <ProgressBar
+        android:id="@+id/healthbar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="100" />
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:text="play"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        <ImageView
+        android:id="@+id/play"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/pet_image_description"
+        app:layout_constraintBottom_toTopOf="@+id/statusBarsLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVerticle_chainStyle="packed"
+        android:src="@drawable/playing" />
+        <ProgressBar
+        android:id="@+id/happinessbar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="100" />
+
+    <Button
+        android:id="@+id/clean"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:text="clean"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        tools:ignore="HardcodedText" />
+        <ImageView
+        android:id="@+id/clean"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/pet_image_description"
+        app:layout_constraintBottom_toTopOf="@+id/statusBarsLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVerticle_chainStyle="packed"
+        android:src="@drawable/clean" />
+        <ProgressBar
+        android:id="@+id/cleanlinessbar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="100" />
+
+</LinearLayout>
